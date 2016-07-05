@@ -1,0 +1,138 @@
+/******************************
+* @Authors:penyu              *
+* @System:webapp              *
+* @Version:v1.0.0             *
+* @update:2015-10-16 14:14:07 *
+*******************************/
+
+
+/*.ui-share-box-bd:after{ content: '\20'; display: block; height: 0; clear: both; }*/
+/*
+#plug-share .ui-mask{
+    bottom: 0px;
+    top:0px;
+    left: 0;
+    right: 0px;
+    opacity: 0.5;
+    background: #000;
+    position: fixed;
+}
+#plug-share .ui-share{
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 240px;
+    padding: 10px;
+}
+.ui-share .ui-share-box{
+*/
+/*
+    float: left;
+    position: relative;
+    left: 50%;
+}
+.ui-share .ui-share-box-cont{
+    margin-left: -50%;
+}
+.ui-share .ui-share-box-bd{
+    padding-top: 20px;
+    width: 640px;
+}
+.ui-share .ui-share-box-ft{
+    width: 640px;
+    text-align: center;
+    padding: 25px 0 0 0;
+    font-size: 28px;
+    color: #666;
+}
+#plug-share .share-icon{
+    float: left;
+}
+#plug-share .share-icon .icon{
+    width: 96px;
+    height: 96px;
+    display: block;
+    background: #fff url("img-share/share-icon.png") 0 0 no-repeat;
+    background-size: cover;
+}
+#plug-share .share-icon{
+    text-align: center;
+    width: 96px;
+    margin-left: 25px;
+    font-size: 22px;
+}
+
+#plug-share .friendround .icon{
+    background-position: 0 0;
+}
+#plug-share .qqfriend .icon{
+    background-position: 0 -117px;
+}
+#plug-share .qqzone .icon{
+    background-position: 0 -259px;
+}
+#plug-share .sinaweibo .icon{
+    background-position: 0 -395px;
+}
+#plug-share .weixin .icon{
+    background-position: 0 -533px;
+}
+*/
+
+#plug-share .-mob-share-ui ul.-mob-share-list li{
+    width: 96px;
+    height: 96px;
+}
+#plug-share .-mob-share-ui ul.-mob-share-list li p{
+    font-size: 22px;
+}
+#plug-share .icon{
+    background: #fff url("img-share/share-icon.png") 0 0 no-repeat;
+}
+#plug-share .friendround .icon{
+    background-position: 0 0;
+}
+#plug-share .-mob-share-qq{
+    background-position: 0 -117px;
+}
+#plug-share .-mob-share-qzone{
+    background-position: 0 -259px;
+}
+#plug-share .-mob-share-weibo{
+    background-position: 0 -395px;
+}
+#plug-share .-mob-share-weixin{
+    background-position: 0 -533px;
+}
+#plug-share .-mob-share-ui .-mob-share-close{
+    font-size: 30px;
+    height: 88px;
+    line-height: 88px;
+}
+#plug-share .-mob-share-ui-button,#plug-share #ui-button{
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    padding: 0px;
+    background: url("img-share/share3x.png") center center no-repeat;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius:50%;
+    overflow: hidden;
+    -webkit-tap-highlight-color:rgba(255,255,255,0);
+}
+.-mob-share-weixin-qrcode-content{
+    width: 364px  !important;
+    margin-left: -57px;
+}
+.-mob-share-weixin-qrcode-content .-mob-share-weixin-qrcode{
+    width:364px;
+    height:364px;
+}
+
+/*----------   2015-10-16 14:14:07   ----------*/

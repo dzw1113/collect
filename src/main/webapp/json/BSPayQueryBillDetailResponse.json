@@ -1,0 +1,94 @@
+{
+  "response": {
+    "responseBody": {
+      "detailList": [
+        {
+          "chargeNo": "C001",
+          "endDate": "20150620",
+          "maturityDate": "1",
+          "paymentAmount": "1",
+          "paymentChannel": "1",
+          "paymentDate": "2015/09/17",
+          "paymentStatus": "2",
+          "penalty": "1",
+          "quantity": "12",
+          "startDate": "20150520",
+          "unitPrice": "120",
+          "readDate": "2015/09/20",
+          "payType": "1"
+        },
+        {
+          "chargeNo": "C002",
+          "endDate": "20150620",
+          "maturityDate": "1",
+          "paymentAmount": "2",
+          "paymentChannel": "1",
+          "paymentDate": "1",
+          "paymentStatus": "01",
+          "penalty": "4",
+          "quantity": "23",
+          "startDate": "20150520",
+          "unitPrice": "21",
+          "readDate": "2015/09/20",
+          "payType": "1"
+        },
+        {
+          "chargeNo": "C003",
+          "endDate": "20150620",
+          "maturityDate": "1",
+          "paymentAmount": "3",
+          "paymentChannel": "1",
+          "paymentDate": "1",
+          "paymentStatus": "01",
+          "penalty": "",
+          "quantity": "12",
+          "startDate": "20150520",
+          "unitPrice": "111",
+          "readDate": "2015/09/20",
+          "payType": "1"
+        },
+        {
+          "chargeNo": "C004",
+          "endDate": "20150620",
+          "maturityDate": "1",
+          "paymentAmount": "3",
+          "paymentChannel": "1",
+          "paymentDate": "1",
+          "paymentStatus": "01",
+          "penalty": "1",
+          "quantity": "14",
+          "startDate": "20150520",
+          "unitPrice": "123",
+          "readDate": "2015/09/20",
+          "lastReading": "2015/09/20",
+          "thisReading": "2015/09/20",
+          "payType": "1"
+        },
+        {
+          "chargeNo": "C005",
+          "endDate": "20150620",
+          "maturityDate": "1",
+          "paymentAmount": "2",
+          "paymentChannel": "1",
+          "paymentDate": "2015/09/17",
+          "paymentStatus": "2",
+          "penalty": "20",
+          "quantity": "13",
+          "startDate": "20150520",
+          "unitPrice": "123",
+          "readDate": "2015/09/20",
+          "lastReading": "2015/09/20",
+          "thisReading": "2015/09/20",
+          "payType": "1"
+        }
+      ]
+    },
+    "responseHeader": {
+      "conversationId": "62e05189a0d4574f6aedded8399e7e72",
+      "returnCode": "000000",
+      "returnStatus": "1",
+      "serviceCode": "BSPayQueryBillDetail",
+      "systemDate": "201509172209416"
+    }
+  }
+}

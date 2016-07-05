@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- <!– QQ强制竖屏 –> -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- <!– UC强制全屏 –> -->
+	<meta name="full-screen" content="yes">
+	<!-- <!– QQ强制全屏 –> -->
+	<meta name="x5-fullscreen" content="true">
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<title>活动详情</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- <link href="css/DefaultSkin.css" rel="stylesheet" /> -->
+	<link href="css/control.css" rel="stylesheet">
+	<link href="css/page.css" rel="stylesheet">
+	<link href="css/errbox.css" rel="stylesheet">
+	<script type="text/javascript" src="js/viewport.js?v=69601e31"></script>
+	<script type="text/javascript" src="../js/jquery/jquery-1.11.3.min.js?v=84e532cc"></script>
+	<script src="../js/datetimepicker/jquery.datetimepicker.full.min.js?v=6cbd6601"></script>
+
+    <script src="../js/jquery/jquery.json.min.js?v=33a79ae0"></script>
+	<script type="text/javascript" src="../js/comm/public-obj.js?v=a8d62b97"></script>
+	<script src="../js/comm/comm.js?v=c6f4381d"></script>
+	<script type="text/javascript" src="../js/comm/switch.js?v=e5b2eb9e"></script>
+	<script type="text/javascript" src="../js/comm/initial.js?v=72abda29"></script>
+	<script type="text/javascript" src="js/ms_prodetail.js?v=1c52b26a"></script>
+<!-- 	// 
+ //    
+ //    
+ //    <script type="text/javascript" src="js/slide.js"></script>
+ //     -->
+</head>
+<body>
+	<div id="page">
+		<div class="page-box">
+			<div class="page-head">
+				<!-- <div class="head-back"><a href="javascript:history.go(-1)"></a></div> -->
+				<div class="head-banner">
+					<div class="item-img"><img src="img/banner/banner1.png?v=51ce78e8" alt=""></div>
+				</div>
+			</div>
+			<div class="page-content">
+<!-- 				<div class="content-hd">
+					<div class="date-box JsW" data-date-type="showtime" data-date-config="{'day': 'day','hour': 'hour','minute': 'minute','second':'second','timeend':'2015/10/01 00:00:00','timestart': ''}">
+						<span class="span">还剩</span>
+						<span class="span-box day radius8">15</span>
+						<span class="span">天</span>
+						<span class="span-box hour radius8">16</span>
+						<span class="span">时</span>
+						<span class="span-box minute radius8">45</span>
+						<span class="span">分</span>
+						<span class="span-box second radius8">53</span>
+						<span class="span">秒</span>
+					</div>
+				</div> -->
+				<div class="content-bd">
+					<div class="item date-item h3">
+<!--					    <span class="spancont">活动日期：2015-10-10至2015-10-30</span>-->
+					</div>
+					<div class="item h3 item-title">
+<!--					    活动标题-->
+					</div>
+					<div class="item h4 itemcont">
+                        <div id="promotion-bd" class="describe">
+                            <div id="promotionContent"></div>
+                            <div class="more">
+                                <span class="dot">...</span>
+                                <span>展开</span>
+                            </div>
+                        </div>
+                        
+<!--					    豪都世纪豪园的业主在活动截止时间之前缴纳九月物业费，即可参与“高温无情，缴费有礼”的抽奖活动，最高可获得价值516元的杭州三日游。-->
+					</div>
+
+					<div class="tab-box">
+						<div class="icon item h3">
+							<span class="span">活动规则</span>
+						</div>
+						<div class="tab-cont-box">
+<!--
+							<ul class="list-tab">
+								<li>．后台根据小区缴费率情况进行抽奖，例如：当活动结束时小区缴费率达到70%，即可抽取100份黑人牙膏、20分厨房三件套</li>
+								<li>１、后台根据小区缴费率情况进行抽奖，例如：当活动结束时小区缴费率达到70%，即可抽取100份黑人牙膏、20分厨房三件套</li>
+								<li>后台根据小区缴费率情况进行抽奖，例如：当活动结束时小区缴费率达到70%，即可抽取100份黑人牙膏、20分厨房三件套</li>
+								<li>后台根据小区缴费率情况进行抽奖，例如：当活动结束时小区缴费率达到70%，即可抽取100份黑人牙膏、20分厨房三件套</li>
+
+							</ul>
+-->
+						</div>
+					</div>
+
+				</div>
+			</div>
+<!--
+			<div class="page-footer">
+				<div class="footer-cont">以上活动解释权归银湾社区生活网络有限公司所有</div>
+			</div>
+-->
+			<div class="footer-ui-ios">
+	            <div id="ui-ios"><div class="iso-br">本活动和设备生产商Apple Inc.公司无关</div></div>
+	        </div>
+		</div>
+    </div>
+    <div class="result-modal">
+        <div class="error dialog">
+            <img src="img/error.png?v=15eb8669">
+            <h2>出错了</h2>
+            <p></p>
+            <i class="close"></i>
+            <div class="btn-group">
+                <a href="javascript:void(0)" class="btn red cancel">确定</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

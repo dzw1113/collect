@@ -1,0 +1,106 @@
+<div class="ks-switchable-content" ng-controller="proPayCostCtrl">
+    <div class="searchpay">
+        <div class="search-box left">
+            <!-- 房号 -->
+            <dirsearch roomlist="roomList"></dirsearch>
+
+				        					    <span>
+				        					    	<input type="button" value="搜索" data-control-type="button"
+                                                           ng-click="callBSPayQueryArreas('2')"
+                                                           class="radius3 JsW button">
+				        					    </span>
+        </div>
+
+        <div class="right keypayment" popup data-widget-config="{'contentId':true}">
+            应收金额：
+            <span class="red" ng-bind="'￥'+(arreasAmount|number:2)"></span>
+            <input type="button" value="收费" class="radius2 button JsW" id="sf" data-control-type="button"
+                   ng-click="callBSPayOnePay()">
+        </div>
+    </div>
+
+    <!-- 业主房屋信息 -->
+    <houseinfo houseInfo="houseInfo"></houseinfo>
+
+
+    <div class="list-table">
+        <div class="list-table-cont table3 ks-inputall">
+            <div class="table-title">
+                <div class="row th">
+                    <table class="leftchbox">
+                        <tr class="th">
+                            <td class="col1"><span>
+																    		<div class="JsW control-checkbox"
+                                                                                 checkboxall data-control-config="{'wait':true}">
+                                                                                <input type="checkbox">
+                                                                            </div>
+																    	 	全选　　</span><span>收费项目</span>
+                            </td>
+                            <td class="col2">应收费用</td>
+                            <td class="col5">滞纳金</td>
+                            <td class="col6">逾期日期</td>
+                            <td class="col7">使用量/面积</td>
+                        </tr>
+                        <tr ng-show="arreaList.length==0">
+                            <td colspan="5">无记录</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="table-cont">
+                <div class="ks-inputall" ng-repeat="arrea in arreaList"
+                     accordion
+                     data-widget-config="{'navCls':'ks-nav-row','contentCls':'ks-cont-row','autoplay':false,'forTouch':true,'activeIndex':1,'multiple':true,'activeCls':'nav-row-btn'}"
+                        >
+                    <div class="row th ks-nav-row ks-active">
+                        <div class="JsW control-checkbox" checkboxall data-control-config="{'wait':false}">
+                            <input type="checkbox">
+                        </div>
+                        <span ng-bind="'账单月份：'+(arrea.billDate|filter_Date_Month)"></span>
+                        <div class="nav-row-btn right"></div>
+                    </div>
+                    <div class="row ks-cont-row ks-active" >
+                        <table class="leftchbox">
+                            <tr ng-repeat="detail in arrea.detailList track by $index">
+                                <td class="col1">
+                                    <div class="JsW control-checkbox" checkbox>
+                                        <input type="checkbox" ng-click="check(detail,chk,arrea.billNo)" data-ng-model="chk">
+                                    </div>
+                                    <span ng-bind="detail.chargeNo|filter_chargeNo"></span>
+                                </td>
+                                <td class="col2" ng-bind="'￥'+(detail.paidAmount|number:2)"></td>
+                                <td class="col5" ng-bind="'￥'+(detail.penalty|number:2)"></td>
+                                <td class="col6" ng-bind="detail.overdueDate|filter_Date"></td>
+                                <td class="col7" ng-bind="detail.useNumber"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row ft">
+                    <div class="left">
+
+                        <div class="link">
+                            <a ng-click="toSubDetail(1)">临时收费</a>
+                            <span class="separator"></span>
+                            <a ng-click="toSubDetail(2)">预收费用</a>
+                            <span class="separator"></span>
+                            <a ng-click="toSubDetail(3)">履约金收费</a>
+                            <span class="separator"></span>
+                            <a ng-click="toSubDetail(4)">履约金退还</a>
+                        </div>
+                    </div>
+                    <div class="right keypayment" popup data-widget-config="{'contentId':true}">
+                        合计：
+                        <span class="red" ng-bind="'￥'+(totalMoney|number:2)"></span>
+                        <input type="button" value="收费" class="radius2 button JsW"
+                               ng-click="callBSPayOnePay()" data-control-type="button">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>

@@ -1,0 +1,12 @@
+{
+  "response": {
+    "responseBody": {},
+    "responseHeader": {
+      "conversationId": "e93477717dccb438f15447af32a409be",
+      "returnCode": "000000",
+      "returnStatus": "1",
+      "serviceCode": "BSPayProvisionalCharge",
+      "systemDate": "201509241009179"
+    }
+  }
+}

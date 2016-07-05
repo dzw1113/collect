@@ -1,0 +1,134 @@
+{
+  "response": {
+    "responseBody": {
+      "formanceList": [
+        {
+          "chargeDate": "20150922174305",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "33",
+          "formanceId": "BS2015092200000321",
+          "houseId": "H0000000003",
+          "returnStatus": "01",
+          "roomNo": "一期11301"
+        },
+        {
+          "accResult": "验收通过,返还全部",
+          "chargeDate": "20150923163332",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "500",
+          "formanceId": "BS2015092300000369",
+          "houseId": "H0000000003",
+          "isoffsetFlag": "Y",
+          "returnAmount": "360.00",
+          "returnStatus": "01",
+          "roomNo": "一期11301"
+        },
+        {
+          "accResult": "部件损坏，扣除部分",
+          "chargeDate": "20150922191038",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "300",
+          "formanceId": "BS2015092200000322",
+          "houseId": "H0000000003",
+          "isoffsetFlag": "Y",
+          "returnAmount": "",
+          "returnStatus": "02",
+          "roomNo": "一期11301"
+        },
+        {
+          "accResult": "验收通过,返还全部",
+          "chargeDate": "20150923162233",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "222",
+          "formanceId": "BS2015092300000368",
+          "houseId": "H0000000003",
+          "isoffsetFlag": "Y",
+          "returnAmount": "40.00",
+          "returnStatus": "01",
+          "roomNo": "一期11301"
+        },
+        {
+          "chargeDate": "20150923165305",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "556",
+          "formanceId": "BS2015092300000372",
+          "houseId": "H0000000003",
+          "returnStatus": "01",
+          "roomNo": "一期11301"
+        },
+        {
+          "chargeDate": "20150923185734",
+          "chargeNo": "C003",
+          "chargeType": "02",
+          "formanceAmount": "15000.0",
+          "formanceId": "BS2015092300000374",
+          "houseId": "H0000000003",
+          "returnStatus": "01",
+          "roomNo": "一期11单元301室"
+        },
+        {
+          "chargeDate": "20150923185650",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "520",
+          "formanceId": "BS2015092300000373",
+          "houseId": "H0000000003",
+          "returnStatus": "01",
+          "roomNo": "一期11单元301室"
+        },
+        {
+          "chargeDate": "20150923164806",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "5",
+          "formanceId": "BS2015092300000371",
+          "houseId": "H0000000003",
+          "returnStatus": "01",
+          "roomNo": "一期11301"
+        },
+        {
+          "accResult": "验收通过，返还全部",
+          "chargeDate": "20150923163547",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "300",
+          "formanceId": "BS2015092300000370",
+          "houseId": "H0000000003",
+          "isoffsetFlag": "N",
+          "returnAmount": "0.000000",
+          "returnStatus": "02",
+          "roomNo": "一期11301"
+        },
+        {
+          "accResult": "01",
+          "chargeDate": "20150923152613",
+          "chargeNo": "C001",
+          "chargeType": "01",
+          "formanceAmount": "600",
+          "formanceId": "BS2015092300000366",
+          "houseId": "H0000000003",
+          "isoffsetFlag": "N",
+          "returnAmount": "",
+          "returnStatus": "02",
+          "roomNo": "一期11301"
+        }
+      ],
+      "isLastPage": false,
+      "pageNum": 1,
+      "pageSize": 10,
+      "total": 12
+    },
+    "responseHeader": {
+      "conversationId": "dc7e8fb9093d01d2c58f6ae603869cff",
+      "returnCode": "000000",
+      "returnStatus": "1",
+      "serviceCode": "BSPayQueryformanceCharge",
+      "systemDate": "20150925102320"
+    }
+  }
+}

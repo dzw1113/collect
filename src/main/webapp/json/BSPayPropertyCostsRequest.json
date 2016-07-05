@@ -1,0 +1,29 @@
+{
+  "requestHeader": {
+    "serviceCode": "BSPayPropertyCosts",
+    "custNo": "",
+    "companyID": 1,
+    "systemCode": "",
+    "softTerminalVersion": "v1.0.0",
+    "interfaceVersion": "v1.0.0",
+    "softTerminalId": "T-WEB",
+    "operator": "",
+    "deviceOs": "",
+    "deviceOsVersion": "",
+    "deviceId": "",
+    "conversationId": 1,
+    "accessToken": "e8f4210988671a34b21b29d5ac0b331a",
+    "systemDate": "20150924203532"
+  },
+  "requestBody": {
+    "houseId": "H0000000002",
+    "ownerName": "dzw123",
+    "plotId": "CID2015091700000009",
+    "roomNo": "nnnaaaffaa",
+    "chargeType": "01",
+    "chargeNo": "C011",
+    "cycle": 1,
+    "chargeAmount": 123,
+    "paymentType": "02"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "request": {
+    "requestBody": {
+      "chargeNo": "",
+      "chargeType": "",
+      "endDate": "",
+      "houseID": "",
+      "operator": "",
+      "pageNum": "1",
+      "pageSize": "10",
+      "payChannel": "",
+      "payStatus": "",
+      "payType": "",
+      "plotID": "CID2015092200000003",
+      "startDate": ""
+    },
+    "requestHeader": {
+      "accessToken": "8406326678de7d3f2eb216cfd81cdd95",
+      "companyID": "",
+      "deviceId": "866331021101680",
+      "deviceOs": "ANDROID",
+      "deviceOsVersion": "4.4.2",
+      "interfaceVersion": "1.0.0",
+      "productId": "CHARGE",
+      "serviceCode": "BSPayQueryRecordList",
+      "softTerminalId": "T-ANDROID",
+      "softTerminalVersion": "1.0.0"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "request": {
+    "requestBody": {
+      "chargeAmount": "600",
+      "chargeName": "",
+      "chargeNo": "C004",
+      "chargeType": "02",
+      "chargeWar": "01",
+      "houseId": "H0000000003",
+      "ownerName": "梁朝伟",
+      "paymentType": "01",
+      "peopleNum": "",
+      "plotId": "CID2015092200000003",
+      "roomNo": "一期11单元301室",
+      "uintPrice": ""
+    },
+    "requestHeader": {
+      "accessToken": "593f1c66121ead30561eb32065050190",
+      "companyID": "",
+      "deviceId": "351670063249028",
+      "deviceOs": "ANDROID",
+      "interfaceVersion": "1.0.0",
+      "productId": "CHARGE",
+      "serviceCode": "BSPayProvisionalCharge",
+      "softTerminalId": "T-ANDROID",
+      "softTerminalVersion": "1.0.0"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+/*-----------------------全局开始--------------------------------*/
+.page-bind{
+	width: 100%;
+	height: 100%;
+}
+.page-bind #page{
+	height: 100%;
+}
+.page-bind #content{
+	height: 100%;
+}
+.page-bind .grid-m0{
+	width: 100%;
+	height: 100%;
+}
+.page-bind .col-main{
+	height: 100%;
+}
+.page-bind .main-wrap{
+	height: 100%;
+}
+.page-bind .skin-box{
+	height: 100%;
+}
+.page-bind .skin-box-bd{
+	height: 100%;
+}
+.page-bind .ok-box,.page-bind .err-box{
+	height: 100%;
+}
+/*-----------------------全局结束--------------------------------*/
+
+/*-----------------------绑定成功+失败开始--------------------------------*/
+.page-bind .box-up{
+	height: 55%;
+	background:#43cb82;
+	position: relative;
+}
+.page-bind .box-bd{
+	position: relative;
+	left: 50%;
+	width: 88px;
+	float: left;
+	height: 100%;
+}
+.page-bind .icon-01{
+	background: url("img/ok-icon01.png") center center no-repeat #43cb82;
+	height: 88px;
+	width: 88px;
+	position:absolute;
+	left: -50%;
+	bottom: 10px;
+}
+.page-bind .box-dn{
+	height: 45%;
+	background: #2bad67;
+}
+.page-bind .box-bd1{
+	position: relative;
+	left: 50%;
+	float: left;
+}
+.page-bind .text-01{
+	white-space: nowrap;
+	position:relative;
+	left: -50%;
+	color: #fff;
+	float: left;
+	font-size: 30px;
+	margin-top:20px;
+}
+
+/*绑定失败开始--------------------------------*/
+.page-bind  .err-box .box-up{background:#ff6f55;}
+.page-bind .err-box .icon-01{
+	background: url("img/err-icon01.png") center center no-repeat #ff6f55;
+	}
+.page-bind .err-box .box-dn{
+	height: 45%;
+	background: #ff4421;
+}
+
+/*绑定失败结束--------------------------------*/
+/*-----------------------绑定成功+失败结束--------------------------------*/

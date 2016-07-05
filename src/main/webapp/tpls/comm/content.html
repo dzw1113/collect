@@ -1,0 +1,119 @@
+<div class="content-box chargeprompt" >
+    <div class="skin-box">
+        <div class="skin-box-bd" tab1
+             data-widget-config="{'activeIndex':0,'contentChildren':'aaa','objName':'tableObj'}">
+
+            <div class="content-box-menu">
+                <ul class="ks-switchable-nav">
+                    <li class="active"><a onclick="tabChange('0')"
+                                          ui-sref="list.listPayCost"><span class="ico bill"></span> <span>账单缴费</span>
+                        <span class="separator"></span></a></li>
+                    <li><a ui-sref="list.proPaycost" onclick="tabChange('1')"> <span class="ico owner"></span> <span>
+                        业主收费</span> <span
+                            class="separator"></span></a></li>
+                    <li><a ui-sref="list.nonProPay" onclick="tabChange('2')"><span class="ico nonowner"></span> <span>非业主收费</span>
+                        <span class="separator"></span></a></li>
+                    <li><a ui-sref="list.payListHistory" onclick="tabChange('3')"><span class="ico record"></span> <span>缴费记录</span> <span
+                            class="end"></span></a></li>
+                </ul>
+            </div>
+            <div class="ks-switchable-content">
+                <div ui-view>
+                    账单缴费加载中....
+                </div>
+            </div>
+        </div>
+        <div class="bottom-border"></div>
+    </div>
+
+
+    <div class="modal-box" id="ks-pop-box" ng-controller="queayCtrl">
+        <div class="bg alpha60"></div>
+        <div class="pop-box">
+            <div class="pop-box-hd">收费确认<i ng-click="popColse()">X</i></div>
+            <div class="pop-box-bd">
+                <ul>
+                    <li>
+                        <div class="left">收费类型：</div>
+                        <div class="right">{{commVar.payableType}}</div>
+                    </li>
+                    <li ng-repeat="rec in record">
+                        <div class="left">{{rec.chargeNo|filter_chargeNo}}：</div>
+                        <div class="right">￥{{rec.arreasAmount}}</div>
+                    </li>
+
+                    <li class="latefees">
+                        <div class="left">
+                            <div class="JsW control-checkbox" checkbox ng-click="totalArreasAmount()">
+                                <input type="checkbox" ng-model="isChargedPenal">
+                            </div>
+                            滞纳金：
+                        </div>
+                        <div class="right">￥{{penaltyTotal}}</div>
+                    </li>
+                    <li>
+                        <div class="left">合计金额：</div>
+                        <div class="right">￥{{arreasAmountTotal|number:2}}</div>
+                    </li>
+                    <li>
+                        <div class="left">优惠折扣：</div>
+                        <div class="right">
+                            <div class="control-css3select">
+                                <select class="radius3" ng-model="discount" ng-change="totalArreasAmount()"
+                                ng-options="discount.key as discount.value for discount in sysdictData.discounts">
+                                    <option value="">无折扣</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">应收金额：</div>
+                        <div class="right">￥{{payable|number:2}}</div>
+                    </li>
+                    <li>
+                        <ul class="ks-swap">
+                            <li>
+                                <div class="left">支付方式：</div>
+                                <div class="right">
+                                    <div class="control-css3select">
+                                        <select selectswap ng-model="paymentType"
+                                                data-ctrlmutual-config="{'content':{'现金':'cash'}}" class="radius3 JsW"
+                                                ng-options="payType.key as payType.value for payType in sysdictData.paymentType"
+                                                >
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li ng-show="paymentType=='01'">
+                                <ul>
+                                    <li>
+                                        <div class="left">实收：</div>
+                                        <div class="right"><input class="radius3" type="number" ng-model="pad"
+                                                                  ng-change="getPaidIn()"/></div>
+                                    </li>
+                                    <li>
+                                        <div class="left">找零：</div>
+                                        <div class="right red">￥{{paidIn|number:2}}</div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pop-box-ft">
+                <div class="redbutton control-button JsW" data-control-type="button"
+                     data-control-config="{'buttonCls':'button'}">
+                    <input value="确认" type="button" class="radius5 button" ng-click="sendBSPayOnePay()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="showResult">
+
+    </div>
+</div>

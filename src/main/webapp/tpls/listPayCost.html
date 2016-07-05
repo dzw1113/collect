@@ -1,0 +1,137 @@
+<div ng-controller="listPayCostCtrl">
+    <div class="search-box">
+        <dirsearch roomlist="roomList"></dirsearch>
+
+				        					    <span>
+				        					    	<input type="button" value="搜索" data-control-type="button"
+                                                           ng-click="getBillListByPage('2')"
+                                                           class="radius3 JsW button">
+				        					    </span>
+    </div>
+
+    <div class="list-table">
+        <div class="list-table-cont table1">
+            <div class="table-title">
+                <div class="row">
+                    <div class="left">
+                        <div class="details">
+                            已收账单：<span ng-bind="receivedBill"></span>笔 已收金额：<span class="red" ng-bind="'￥'+(receivedAmount|number:2)"></span>
+                        </div>
+                    </div>
+                    <div class="right" ng-show="!houseId">
+                        <div class="details">
+                            待收账单：<span ng-bind="colletedBill"></span>笔 待收金额：<span class="red" ng-bind="'￥'+(colletedAmount|number:2)"></span>
+                        </div>
+                    </div>
+                    <div class="right" ng-show="houseId" popup
+                         data-widget-config="{'contentId':true,'align':{'offset':[-250,-10]}}">
+                        <div class="details keypayment">
+                            <input type="button" value="一键缴费" class="radius2 button JsW"
+                                   ng-click="callBSPayOnePay()"
+                                   data-control-type="button" id="jf">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <table>
+                        <tr class="th">
+                            <td class="col1"><span class="checkboxall" ng-show="houseId">
+																      		<div class="JsW control-checkbox"
+                                                                                 checkboxall
+                                                                                 data-control-config="{'wait':true}">
+                                                                                <input type="checkbox">
+                                                                            </div>
+																		    全选
+																		</span>
+
+                                房号
+                            </td>
+                            <td class="col2">业主姓名</td>
+                            <td class="col3">应缴费用</td>
+                            <td class="col4">已交费用</td>
+                            <td class="col5">欠款</td>
+                            <td class="col7">账单日期</td>
+                            <td class="col8" data-widget-config="{'dropDown':500,'document':'true','align': {'offset':[0,10],'points': ['bc','tc']
+		            }}" popup>
+                                <div id="status" class="ks-pop-nav">账单状态</div>
+
+                                <div class="drop-box ks-pop-box" style="display:none;">
+                                    <div class="bg alpha60"></div>
+                                    <div class="drop-cont">
+                                        <form action="">
+                                            <ul class="list">
+                                                <li>
+                                                    <div class="JsW control-checkbox" checkbox>
+                                                        <input type="checkbox" style="display: none;" ng-model="paid">
+                                                    </div>
+                                                    已缴
+                                                </li>
+                                                <li>
+                                                    <div class="JsW control-checkbox" checkbox>
+                                                        <input type="checkbox" style="display: none;" ng-model="unpaid">
+                                                    </div>
+                                                    未缴
+                                                </li>
+                                                <li>
+                                                    <div class="JsW control-checkbox" checkbox>
+                                                        <input type="checkbox" style="display: none;" ng-model="owe">
+                                                    </div>
+                                                    欠费
+                                                </li>
+                                            </ul>
+                                            <div class="redbutton JsW" data-control-type="button"
+                                                 data-control-config="{'buttonCls':'button'}">
+                                                <input value="确定" type="button" class="radius2 button red ks-pop-close"
+                                                       ng-click="filterList()">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="table-cont">
+                <div>
+                    <div class="row">
+                        <table data-ng-init="getBillListByPage('1')">
+                            <tr class="th" ng-repeat="bill in billList">
+
+                                <td class="col1">
+                                    <div class="control-checkbox" checkbox ng-show="houseId">
+                                        <input type="checkbox"
+                                               data-ng-click="check(billList[$index].billNo,chk)" data-ng-model="chk">
+                                    </div>
+
+                                    &nbsp;&nbsp;
+                                    <a ng-click="toDetail(bill)" ng-bind="bill.areaNo+bill.unitNo+'单元'+bill.roomNo"></a>
+                                </td>
+                                <td class="col2" ng-bind="bill.ownerName"></td>
+                                <td class="col3" ng-bind="'￥'+(bill.billAmount|number:2)"></td>
+                                <td class="col4 red" ng-bind="'￥'+(bill.paidAmount|number:2)"></td>
+                                <td class="col5" ng-bind="'￥'+((bill.billAmount-bill.paidAmount)|number:2)"></td>
+                                <td class="col7" ng-bind="bill.billDate|filter_Date"></td>
+                                <td class="col8" ng-bind="bill.billStatus|filter_billStatus"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="list-table-page">
+            <div class="table-page-con">
+                <pagination total-items="responseBody.total" ng-model="vm.page.pageNum" max-size="10"
+                            items-per-page="vm.page.pageSize"
+                            ng-change="vm.pageChanged()"
+                            class="pagination-sm pull-right" boundary-links="true" first-Text="首页"
+                            last-Text="最后一页" previous-text="上一页" next-text="下一页"></pagination>
+            </div>
+        </div>
+    </div>
+
+
+</div>

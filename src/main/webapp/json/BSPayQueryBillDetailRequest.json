@@ -1,0 +1,15 @@
+{
+  "request": {
+    "requestBody": {
+      "billNo": "1"
+    },
+    "requestHeader": {
+      "accessToken": "371941975714108",
+      "companyID": "",
+      "interfaceVersion": "v1.0.0",
+      "serviceCode": "BSPayQueryBillDetail",
+      "softTerminalId": "P-WEB",
+      "softTerminalVersion": "v1.0.0"
+    }
+  }
+}

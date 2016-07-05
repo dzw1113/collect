@@ -1,0 +1,22 @@
+{
+  "requestHeader": {},
+  "requestBody": {
+    "houseId": "H0000000052",
+    "plotId": "C730000000018",
+    "chargeType": "01",
+    "paymentAmount": 1301,
+    "discounts": "1",
+    "paymentType": "01",
+    "isChargedPenal": "N",
+    "payerChannel": "",
+    "discountAmount": "",
+    "type": "",
+    "code": "",
+    "billList": [
+      {
+        "billNo": "BS2015093000000952",
+        "chargeNos": "C003,C004,C002,C001"
+      }
+    ]
+  }
+}

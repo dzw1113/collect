@@ -1,0 +1,67 @@
+<div id="page" class="billpayment">
+    <div id="header" class="layout">
+        <div class="grid-m">
+            <div class="col-main">
+                <div class="main-wrap">
+                    <div class="skin-box">
+                        <div class="skin-box-bd " ng-controller="HeaderCtrl">
+                            <div class="banner">
+                                <div class="left">
+                                    <div class="logo" id="logo" style="logoImg"></div>
+									<div class="logo-txt" ng-bind="logoName">
+                                        <!-- {{responseBody.companyName}} -->
+                                    </div>
+                                    <span class="separator"></span>
+
+                                    <div class="sys">
+                                        收费系统<span>ICIP智慧社区平台</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <ul class="userinfo">
+                                        <li><a ng-click="USExit('USExit')">退出</a></li>
+                                        <li><a ui-sref="nonavPage.rePassword">修改密码</a></li>
+                                        <li class="separator"></li>
+                                        <li>{{responseBody.name}}，欢迎登陆{{responseBody.cList[0].communityName}}小区服务中心！
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="layout">
+        <div class="grid-m0">
+            <div class="col-main">
+                <div class="main-wrap">
+                    <div ui-view="content">
+                        内容加载中....
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="layout">
+        <div class="grid-m">
+            <div class="col-main">
+                <div class="main-wrap">
+                    <div class="skin-box">
+                        <div class="skin-box-bd">
+                            <div class="footer-box">
+                                <div class="footer-content">
+<!--                                     <p>版权所有：上海银湾生活网有限公司 联系电话：021-xxxxxxxx</p> -->
+
+<!--                                     <p>联系地址：上海市虹口区曲阳路800号上海商务中心大厦36－37F</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

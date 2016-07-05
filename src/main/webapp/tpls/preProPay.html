@@ -1,0 +1,122 @@
+<div style="display: block;" class="tempcharge" ng-controller="preProPayCtrl">
+
+    <!-- 业主房屋信息 -->
+    <houseinfo houseInfo="houseInfo"></houseinfo>
+
+    <div class="content-box-con">
+        <div class="content-box-label"><span>预缴费用</span></div>
+        <form action="">
+		<div class="rule-box">
+            <div class="content-box-form left">
+
+                <ul>
+                    <div class="ks-swap">
+                        <li>
+                            <div class="left">费项名称：</div>
+                            <div class="right">
+                                <div class="control-css3select">
+                                    <select class="radius3 JsW" data-ctrlmutual-type="selectswap" ng-model="chargeNo"
+                                            ng-change="showPrice()"
+                                            ng-options="charge.chargeNo as charge.chargeName for charge in chargeList">
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">当前单价：</div>
+                            <div class="right red" ng-bind="'￥'+(thisUnitPrice|number)"></div>
+                        </li>
+                        <div class="ks-swap-cont1" ng-hide="chargeNo=='C001'||chargeNo=='C002'">
+                            <li>
+                                <div class="left">收费金额：</div>
+                                <div class="right"><input class="radius3" type="number" ng-model="chargeAmount"></div>
+                            </li>
+                        </div>
+                        <div class="ks-swap-cont2" ng-show="chargeNo=='C001'||chargeNo=='C002'">
+                            <li>
+                                <div class="left">
+                                    收费周期：
+                                </div>
+                                <div class="right">
+                                    <div class="control-css3select">
+                                        <select class="radius3" ng-model="cycle" ng-change="calculatePrice()"
+                                        ng-options="cy.key as cy.value for cy in sysdictData.cycle">
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <div ng-show="cycle=='0'">
+                                <li>
+                                    <div class="left">月份：</div>
+                                    <div class="right"><input class="radius3" type="number" ng-model="cycle1"
+                                                              ng-change="calculatePrice()"></div>
+                                </li>
+                            </div>
+
+                            <li>
+                                <div class="left">待收金额：</div>
+                                <div class="right red" ng-bind="'￥'+(collectMoney|number:2)"></div>
+                            </li>
+                            <li>
+                                <div class="left">应收金额：</div>
+                                <div class="right red" ng-bind="'￥'+(chargeAmount|number:2)"></div>
+                            </li>
+                            <div ng-show="shippingType==0">
+                                <li>
+                                    <div class="left">优惠金额：</div>
+                                    <div class="right red" ng-bind="'￥'+(advanceAmount)"></div>
+                                </li>
+                            </div>
+                            <div ng-show="shippingType==1">
+                                <li>
+                                    <div class="left">优惠比例：</div>
+                                    <div class="right red" ng-bind="shippingRate"></div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ks-swap">
+                        <li>
+                            <div class="left">支付方式：</div>
+                            <div class="right">
+                                <div class="control-css3select">
+                                    <select data-ctrlmutual-type="selectswap" ng-model="paymentType"
+                                    ng-options="payType.key as payType.value for payType in sysdictData.paymentType">
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cash" ng-show="paymentType==01">
+                            <div class="left">实收：</div>
+                            <div class="right"><input class="radius3" type="number" ng-model="cashMoney" ng-change="getChangeMoney()"></div>
+                        </li>
+                        <li class="cash" ng-show="paymentType=='01'">
+                            <div class="left">找零：</div>
+                            <div class="right red" ng-bind="'￥'+(changeMoney|number:2)"></div>
+                        </li>
+
+                    </div>
+                </ul>
+            </div>
+			<div class="right">
+		            <div class="rule-content">
+                        <div class="rule-title">优惠规则</div>
+		                <ul>
+		                    <li>1、优惠说明1 优惠说明1 优惠说明1 优惠说明1 优惠说明1 优惠说明1 优惠说明1</li>
+		                    <li>2、优惠说明2优惠说明2优惠说明2优惠说明2优惠说明2优惠说明2优惠说明2优惠说明2优惠说明2</li>
+		                    <li>3、优惠说明3优惠说明3优惠说明3优惠说明3优惠说明3优惠说明3优惠说明3优惠说明3</li>
+		                    <li>4、优惠说明4优惠说明4优惠说明4优惠说明4优惠说明4优惠说明4优惠说明4优惠说明4</li>
+		                </ul>
+		            </div>
+		        </div>
+		  </div>
+			<div class="confirm redbutton">
+                <div class="confirm redbutton control-button">
+                    <input value="确认收费" type="button" class="radius3 button JsW" data-control-type="button" ng-click="applyPay()">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

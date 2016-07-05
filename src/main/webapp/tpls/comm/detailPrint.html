@@ -1,0 +1,116 @@
+<div class="JsW" id="print"
+			data-widget-config="{'printCls':'printdetail'}">
+			<div>
+				<div class="list-table-cont table7">
+					<div class="table-title">
+						<div class="row tt">
+							<div class="logo1">
+								<img src="css/img/01_image_logo03.png">
+							</div>
+							<div>
+								2015年3月物业缴费明细
+								<p class="subtitle">2015.3.01-2015.3.31</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="subdetails">
+								收费单位：<span>{{companyName}}</span>
+							</div>
+							<div class="subdetails">
+								账单状态：<span>{{billStatus}}</span>
+							</div>
+							<div class="subdetails">
+								小区名称：<span>{{communityName}}小区</span>
+							</div>
+							<div class="subdetails margin">
+								<div class="left">
+									<ul class="detailslist">
+										<li>业主姓名：<span>{{houseInfo.ownerName}}</span>
+										</li>
+										<li>房号：<span>{{houseInfo.banNo}}{{houseInfo.unitNo}}单元{{houseInfo.roomNo}}</span>
+										</li>
+										<li>房屋建筑面积：<span>{{houseInfo.houseBuildArea}}㎡</span>
+										</li>
+									</ul>
+								</div>
+								<div class="right">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-cont">
+						<div class="row one">
+							<table>
+								<tbody>
+									<tr class="th">
+										<td class="col1">收费项目</td>
+										<td class="col2">单价</td>
+										<td class="col3">数量</td>
+										<td class="col4">金额</td>
+										<td class="col5">滞纳金</td>
+										<td colspan="2" class="col9">逾期日期</td>
+										<td class="col5">收费方式</td>
+										<td class="tablelayoutcol"></td>
+
+									</tr>
+									<tr class="th" ng-repeat="unRead in unReadList">
+										<td class="col1">{{unRead.chargeNo}}</td>
+										<td class="col2">{{unRead.unitPrice}}</td>
+										<td class="col3">{{unRead.quantity}}</td>
+										<td class="col4">￥{{unRead.paymentAmount}}</td>
+										<td class="col5">￥{{unRead.penalty}}</td>
+										<td colspan="2" class="col9">{{unRead.overdueDate}}</td>
+										<td class="col5">{{unRead.chargeWay}}</td>
+										<td class="tablelayoutcol"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="row two mergeup">
+							<table>
+								<tbody>
+									<tr class="th">
+										<td class="col1">收费项目</td>
+										<td class="col2">抄表时间</td>
+										<td class="col3">上次读数</td>
+										<td class="col4">本次读数</td>
+										<td class="col6">数量</td>
+										<td class="col5">单价</td>
+										<td class="col7">金额</td>
+										<td colspan="2" class="col8">滞纳金</td>
+										<td class="col10">缴纳时间</td>
+										<td class="col5">收费方式</td>
+										<td class="tablelayoutcol"></td>
+									</tr>
+									<tr ng-repeat="read in readList">
+										<td class="col1">{{read.chargeNo}}</td>
+										<td class="col2">{{read.readDate}}</td>
+										<td class="col3">{{read.lastReading}}</td>
+										<td class="col4">{{read.thisReading}}</td>
+										<td class="col5">{{read.quantity}}</td>
+										<td class="col6">{{read.unitPrice}}</td>
+										<td class="col7">￥{{read.paymentAmount}}</td>
+										<td colspan="2" class="col8">￥{{read.penalty}}</td>
+										<td class="col10">{{read.paymentDate}}</td>
+										<td class="col5">{{read.chargeWay}}</td>
+										<td class="tablelayoutcol"></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+						<div class="row">
+							<div class="subdetails margin">
+								<div class="left ">
+									支付方式：<span>服务中心缴费</span>
+								</div>
+								<div class="right">
+									合计金额（大写）：<span class="red" ng-bind="paymentAmountTotalDX"></span> ￥：<span
+										class="red" ng-bind="paymentAmountTotal|number:2">元</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

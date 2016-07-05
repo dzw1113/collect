@@ -1,0 +1,60 @@
+{
+  "response": {
+    "responseBody": {
+      "incomeAmount": 1000,
+      "spend": 1000,
+      "totalAmount": 2000,
+      "reconList": [
+        {
+          "staType": "R001",
+          "items": "1",
+          "amount": "2"
+        },
+        {
+          "staType": "R002",
+          "items": "1",
+          "amount": "2"
+        },
+        {
+          "staType": "R003",
+          "items": "1",
+          "amount": "2"
+        },
+        {
+          "staType": "R004",
+          "items": "1",
+          "amount": "2"
+        },
+        {
+          "staType": "R005",
+          "items": "1",
+          "amount": "2"
+        },
+        {
+          "staType": "R006",
+          "items": "1",
+          "amount": "2"
+        },
+        {
+          "staType": "R007",
+          "items": "1",
+          "amount": "2"
+        },
+        {
+          "staType": "R008",
+          "items": "1",
+          "amount": "2"
+        }
+      ]
+    },
+    "responseHeader": {
+      "accessToken": "e8f4210988671a34b21b29d5ac0b331a",
+      "conversationId": "a0cb9926f483fee070828548ea0e1ecb",
+      "returnCode": "IICIPUS20003",
+      "returnDesc": "登录成功！",
+      "returnStatus": "1",
+      "serviceCode": "BSPayQueryReconInfo",
+      "systemDate": "201509171509594"
+    }
+  }
+}

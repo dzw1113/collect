@@ -1,0 +1,22 @@
+{
+  "request": {
+    "requestBody": {
+    },
+    "requestHeader": {
+      "accessToken": "1",
+      "companyID": "1",
+      "conversationId": "1",
+      "custNo": "",
+      "deviceId": "",
+      "deviceOs": "",
+      "deviceOsVersion": "",
+      "interfaceVersion": "v1.0.0",
+      "operator": "",
+      "serviceCode": "BCCExit",
+      "softTerminalId": "T-WEB",
+      "softTerminalVersion": "v1.0.0",
+      "systemCode": "",
+      "systemDate": "20150917181003"
+    }
+  }
+}

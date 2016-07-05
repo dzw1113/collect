@@ -1,0 +1,17 @@
+{
+  "response": {
+    "responseBody": {
+    },
+    "responseHeader": {
+      "deviceId": "2e25d81501f12c856c60b2b159b7efec",
+      "softTerminalId": "P-IOS",
+      "companyID": "",
+      "softTerminalVersion": "v1.0.0",
+      "deviceOsVersion": "8.2",
+      "deviceOs": "1",
+      "accessToken": "",
+      "serviceCode": "BSQueryHouseInfo",
+      "interfaceVersion": "v1.0.0"
+    }
+  }
+}

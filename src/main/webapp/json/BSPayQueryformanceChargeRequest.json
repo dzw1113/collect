@@ -1,0 +1,20 @@
+{
+  "request": {
+    "requestBody": {
+      "houseId": "",
+      "plotId": "CID2015092200000003"
+    },
+    "requestHeader": {
+      "accessToken": "1bb7655ccc7958499433866c6d3dbf4e",
+      "companyID": "",
+      "deviceId": "351670063249028",
+      "deviceOs": "ANDROID",
+      "deviceOsVersion": "4.4.2",
+      "interfaceVersion": "1.0.0",
+      "productId": "CHARGE",
+      "serviceCode": "BSPayQueryformanceCharge",
+      "softTerminalId": "T-ANDROID",
+      "softTerminalVersion": "1.0.0"
+    }
+  }
+}

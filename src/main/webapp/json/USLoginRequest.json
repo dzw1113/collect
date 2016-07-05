@@ -1,0 +1,18 @@
+{
+  "request": {
+    "requestBody": {
+      "username": "18680303292",
+      "password": "e10adc3949ba59abbe56e057f20f883e"
+    },
+    "requestHeader": {
+      "softTerminalId": "P-IOS",
+      "companyID": "",
+      "softTerminalVersion": "1.0",
+      "deviceOsVersion": "8.4",
+      "deviceOs": "1",
+      "accessToken": "",
+      "serviceCode": "USLogin",
+      "interfaceVersion": "V1.0"
+    }
+  }
+}

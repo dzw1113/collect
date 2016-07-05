@@ -1,0 +1,43 @@
+{
+  "response": {
+    "responseBody": {
+      "roomList": [
+        {
+          "ban": "1期2栋",
+          "unitList": [
+            {
+              "houseNumList": [
+                {
+                  "houseId": "H0000000002",
+                  "houseNo": "501"
+                }
+              ],
+              "unit": "3"
+            }
+          ]
+        },
+        {
+          "ban": "1期3栋",
+          "unitList": [
+            {
+              "houseNumList": [
+                {
+                  "houseId": "H0000000001",
+                  "houseNo": "401"
+                }
+              ],
+              "unit": "2"
+            }
+          ]
+        }
+      ]
+    },
+    "responseHeader": {
+      "conversationId": "e7f524d9c0bf3a8e0bc6d56cc786f496",
+      "returnCode": "000000",
+      "returnStatus": "1",
+      "serviceCode": "BSPayUnitHouseNumber",
+      "systemDate": "201509180909581"
+    }
+  }
+}

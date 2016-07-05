@@ -1,0 +1,12 @@
+{
+  "response": {
+    "responseBody": {},
+    "responseHeader": {
+      "conversationId": "b39dfb83b594b784f5b2688c147a4c75",
+      "returnCode": "000000",
+      "returnStatus": "1",
+      "serviceCode": "BCCExit",
+      "systemDate": "20150917180987"
+    }
+  }
+}

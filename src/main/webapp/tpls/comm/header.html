@@ -1,0 +1,27 @@
+<div class="grid-m">
+    <div class="col-main">
+        <div class="main-wrap">
+            <div class="skin-box">
+                <div class="skin-box-bd " ng-controller="HeaderCtrl">
+                    <div class="banner">
+                        <div class="left">
+                            <div class="logo" id="logo"></div>
+                            <span class="separator"></span>
+                            <div class="sys">
+                                收费系统<span>ICIP智慧社区平台</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <ul class="userinfo">
+                                <li><a ng-click="USExit('USExit')">退出</a></li>
+                                <li>修改密码</li>
+                                <li class="separator"></li>
+                                <li>{{responseBody.name}}，欢迎登陆{{responseBody.cList[0].communityName}}小区服务中心！</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

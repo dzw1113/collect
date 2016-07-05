@@ -1,0 +1,17 @@
+{
+  "request": {
+    "requestBody": {
+      "plotId": "CID2015091700000009",
+	  "shippingType":"0"
+    },
+    "requestHeader": {
+      "accessToken": "",
+      "companyID": "",
+      "deviceId": "",
+      "interfaceVersion": "v1.0.0",
+      "serviceCode": "BSPayQueryPreInfo",
+      "softTerminalId": "P-ANDROID",
+      "softTerminalVersion": "v1.0.0"
+    }
+  }
+}

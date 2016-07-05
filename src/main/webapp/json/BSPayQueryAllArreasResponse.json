@@ -1,0 +1,83 @@
+{
+  "response": {
+    "responseBody": {
+      "arreaList": [
+        {
+          "billDate": "20150919",
+          "billNo": "BS2015091900000306",
+          "detailList": [
+            {
+              "chargeNo": "C001",
+              "detailNo": "BS2015091900000310",
+              "overdueDate": "20151222",
+              "paidAmount": "220.00",
+              "useNumber": "2222",
+              "penalty": "0"
+            },
+            {
+              "chargeNo": "C002",
+              "detailNo": "BS2015091900000311",
+              "overdueDate": "20160201",
+              "paidAmount": "0.10",
+              "useNumber": "2222",
+              "penalty": "0"
+            }
+          ]
+        },
+        {
+          "billDate": "20150819",
+          "billNo": "BS2015091900000306",
+          "detailList": [
+            {
+              "chargeNo": "C001",
+              "detailNo": "BS2015091900000312",
+              "overdueDate": "20151222",
+              "paidAmount": "280.00",
+              "useNumber": "2222",
+              "penalty": "0"
+            },
+            {
+              "chargeNo": "C002",
+              "detailNo": "BS2015091900000313",
+              "overdueDate": "20160201",
+              "paidAmount": "0.10",
+              "useNumber": "2222",
+              "penalty": "0"
+            },
+            {
+              "chargeNo": "C003",
+              "detailNo": "BS2015091900000314",
+              "overdueDate": "20160101",
+              "paidAmount": "0.10",
+              "useNumber": "2222",
+              "penalty": "20"
+            }
+          ]
+        },
+        {
+          "billDate": "20150719",
+          "billNo": "BS2015091900000306",
+          "detailList": [
+            {
+              "chargeNo": "C001",
+              "detailNo": "BS2015091900000315",
+              "overdueDate": "20151222",
+              "paidAmount": "200.00",
+              "useNumber": "2222",
+              "penalty": "0"
+            }
+          ]
+        }
+      ],
+      "arreasAmount": 990.4000244140625,
+      "penaltyTotal": 20
+    },
+    "responseHeader": {
+      "conversationId": "49651842d07866c56c3801ff401ca2ba",
+      "returnCode": "000000",
+      "returnStatus": "1",
+      "serviceCode": "BSPayQueryAllArreas",
+      "systemDate": "20150920180928"
+    }
+  }
+}

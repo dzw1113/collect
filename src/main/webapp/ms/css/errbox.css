@@ -1,0 +1,257 @@
+/******************************
+* @Authors:penyu              *
+* @System:webapp              *
+* @Version:v1.0.0             *
+* @update:2015-10-16 14:14:07 *
+*******************************/
+
+*{
+     box-sizing: border-box;
+    outline: 0 none;
+}
+.error a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+.close,
+.first-close {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-image: url(img/close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 99;
+}
+
+.btn-group {
+    text-align: center;
+}
+
+.btn {
+    font-size: 36px;
+    line-height: 70px;
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#status{
+    font-size: 28px;
+    color: #ed3258;
+    text-align: center;
+    margin-bottom: 35px;
+    display: none;
+}
+.btn.red {
+    background-color: #ed3258;
+    box-shadow: 0 4px #c31b3d;
+}
+
+.btn.orange {
+    margin-left: 40px;
+    background-color: #ff8d28;
+    box-shadow: 0 4px #d66501;
+    display: none;
+}
+
+.btn:active {
+    box-shadow: none;
+}
+
+.result-modal {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.dialog.first {
+    width: 440px;
+}
+
+.dialog.first > div {
+    padding: 30px 20px;
+    text-align: center;
+    -webkit-border-radius: 0 0 20px 20px;
+    border-radius: 0 0 20px 20px;
+    background-color: #fff;
+}
+
+.dialog.first h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.dialog.first p {
+    font-size: 24px;
+    display: none;
+}
+
+.dialog.first p span {
+    color: #fd2828;
+}
+
+.dialog.first .close,
+.dialog.first .first-close {
+    top: -80px;
+    right: -80px;
+}
+
+.dialog.error {
+    color: #fff;
+}
+
+.dialog.error h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dialog.error p {
+    font-size: 24px;
+    line-height: 1.428571429;
+    max-width: 320px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dialog.noCredits > div,
+.dialog.gameover > div {
+    position: absolute;
+    top: 70px;
+    right: 114px;
+    width: 170px;
+    text-align: center;
+}
+
+.dialog.noCredits h2,
+.dialog.gameover h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #f54b29;
+}
+
+.dialog.noCredits p,
+.dialog.gameover p {
+    font-size: 24px;
+    line-height: 1.428571429;
+}
+
+.dialog.noCredits .close,
+.dialog.gameover .close {
+    top: -50px;
+}
+
+.dialog.gameover > div {
+    position: absolute;
+    top: 86px;
+    right: 120px;
+    width: 190px;
+}
+
+.dialog.failed {
+    color: #fff;
+}
+
+.dialog.failed .face {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(img/cry.png);
+    background-repeat: no-repeat;
+}
+
+.dialog.failed .face.crow {
+    width: 190px;
+    height: 160px;
+    background-position: -314px 0;
+}
+
+.dialog.failed .face.crow ~ img {
+    margin-top: -50px;
+}
+
+.dialog.failed .face.crow ~ .title {
+    top: 140px;
+}
+
+.dialog.failed .title {
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    text-align: center;
+}
+
+.dialog.failed .title h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow: 0 3px 0 #5095ff;
+}
+
+.dialog.failed .title p {
+    font-size: 24px;
+    line-height: 1.428571429;
+    text-shadow: 0 1px 0 #5095ff;
+}
+
+.dialog.failed > img {
+    margin-top: -70px;
+}
+
+.dialog.failed .btn-group {
+    margin-top: 20px;
+}
+
+.dialog.win {
+    background-image: url(img/winsun.png);
+    background-repeat: no-repeat;
+}
+
+.dialog.win > img {
+    position: relative;
+    z-index: 1;
+}
+
+.dialog.win .help {
+    font-size: 24px;
+    line-height: 1.428571429;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fef56e;
+}
+.weixinalert{
+    top:10%;
+}
+.result-modal .success .btn-group {
+    margin-top: -40px;
+}
+
+/*----------   2015-10-16 14:14:07   ----------*/

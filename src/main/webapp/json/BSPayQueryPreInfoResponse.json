@@ -1,0 +1,25 @@
+{
+  "response": {
+    "responseBody": {
+      "shippingList": [
+        {
+          "chargeNo": "COO1",
+          "shippingAmount": "100",
+          "shippingRate": "0.9",
+          "shippingRule": "3",
+          "shippingType": "1",
+          "shippingWar": "0"
+        }
+      ]
+    },
+    "responseHeader": {
+      "accessToken": "e8f4210988671a34b21b29d5ac0b331a",
+      "conversationId": "a0cb9926f483fee070828548ea0e1ecb",
+      "returnCode": "IICIPUS20003",
+      "returnDesc": "查询成功",
+      "returnStatus": "1",
+      "serviceCode": "BSPayQueryPreInfo",
+      "systemDate": "201509171509594"
+    }
+  }
+}

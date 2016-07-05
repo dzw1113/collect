@@ -1,0 +1,128 @@
+<div class="billdetails" ng-controller="listPayCostDetailPrintCtrl">
+	<div class="list-table">
+
+		<!--startprint1-->
+
+		<div class="JsW" id="myPrintArea"
+			data-widget-config="{'printCls':'printdetail'}">
+			<div>
+				<div class="list-table-cont table7">
+					<div class="table-title">
+						<div class="row tt">
+							<div class="logo1">
+								{{companyName}}
+							</div>
+							<div>
+								{{startDate|filter_Date_Month}}月物业缴费明细
+								<p class="subtitle" ng-bind="(startDate|filter_Date) + '/' +(endDate|filter_Date)"></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="subdetails">
+								收费单位：<span ng-bind="companyName"></span>
+							</div>
+							<div class="subdetails">
+								账单状态：<span ng-bind="billStatus"></span>
+							</div>
+							<div class="subdetails">
+								小区名称：<span ng-bind="communityName">小区</span>
+							</div>
+							<div class="subdetails margin">
+								<div class="left">
+									<ul class="detailslist">
+										<li>业主姓名：<span ng-bind="houseInfo.ownerName"></span>
+										</li>
+										<li>房号：<span
+											ng-bind="houseInfo.banNo+houseInfo.unitNo+'单元'+houseInfo.roomNo"></span>
+										</li>
+										<li>房屋建筑面积：<span ng-bind="houseInfo.houseBuildArea+'㎡'"></span>
+										</li>
+									</ul>
+								</div>
+								<div class="right"></div>
+							</div>
+						</div>
+					</div>
+					<div class="table-cont">
+						<div class="row one">
+							<table>
+								<tbody>
+									<tr class="th">
+										<td class="col1">收费项目</td>
+										<td class="col2">单价</td>
+										<td class="col3">数量</td>
+										<td class="col4">金额</td>
+										<td class="col5">滞纳金</td>
+										<td colspan="2" class="col9">逾期日期</td>
+										<td class="col5">收费方式</td>
+										<td class="tablelayoutcol"></td>
+
+									</tr>
+									<tr class="th" ng-repeat="unRead in unReadList">
+										<td class="col1" ng-bind="unRead.chargeNo|filter_chargeNo"></td>
+										<td class="col2" ng-bind="(unRead.unitPrice|number:2)"></td>
+										<td class="col3" ng-bind="(unRead.quantity|number:2)"></td>
+										<td class="col4" ng-bind="'￥'+(unRead.paymentAmount|number:2)"></td>
+										<td class="col5" ng-bind="'￥'+(unRead.penalty|number:2)"></td>
+										<td colspan="2" class="col9"
+											ng-bind="unRead.paymentDate|filter_Date"></td>
+										<td class="col5" ng-bind="unRead.chargeWay|filter_chargeWar"></td>
+										<td class="tablelayoutcol"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="row two mergeup">
+							<table>
+								<tbody>
+									<tr class="th">
+										<td class="col1">收费项目</td>
+										<td class="col2">抄表时间</td>
+										<td class="col3">上次读数</td>
+										<td class="col4">本次读数</td>
+										<td class="col6">数量</td>
+										<td class="col5">单价</td>
+										<td class="col7">金额</td>
+										<td colspan="2" class="col8">滞纳金</td>
+										<td class="col10">缴纳时间</td>
+										<td class="col5">收费方式</td>
+										<td class="tablelayoutcol"></td>
+									</tr>
+									<tr ng-repeat="read in readList">
+										<td class="col1" ng-bind="read.chargeNo|filter_chargeNo"></td>
+										<td class="col2" ng-bind="read.readDate|filter_Date"></td>
+										<td class="col3" ng-bind="read.lastReading"></td>
+										<td class="col4" ng-bind="read.thisReading"></td>
+										<td class="col5" ng-bind="read.quantity|number:2"></td>
+										<td class="col6" ng-bind="read.unitPrice|number:2"></td>
+										<td class="col7" ng-bind="'￥'+(read.paymentAmount|number:2)"></td>
+										<td colspan="2" class="col8"
+											ng-bind="'￥'+(read.penalty|number:2)"></td>
+										<td class="col10" ng-bind="read.paymentDate|filter_Date"></td>
+										<td class="col5" ng-bind="read.chargeWay|filter_chargeWar"></td>
+										<td class="tablelayoutcol"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="row">
+							<div class="subdetails margin">
+								<div class="left ">
+									支付方式：<span>服务中心缴费</span>
+								</div>
+								<div class="right">
+									合计金额（大写）：￥：<span class="red" ng-bind="paymentAmountTotalDX"></span><span
+										class="red" ng-bind="paymentAmountTotal"></span>元
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--endprint1-->
+
+
+
+	</div>
+</div>

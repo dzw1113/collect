@@ -1,0 +1,29 @@
+{
+  "response": {
+    "responseBody": {
+      "certNo": "123456789009876543",
+      "firstLogin": "0",
+      "isMarried": "1",
+      "lastLoginTime": "20150916221539",
+      "loginCount": "29",
+      "mobile": "18680303292",
+      "name": "测试员工",
+      "cList": [
+        {
+          "communityName": "yinwan",
+          "cid": "CID2015091700000009"
+        }
+      ],
+      "sex": "M"
+    },
+    "responseHeader": {
+      "accessToken": "e8f4210988671a34b21b29d5ac0b331a",
+      "conversationId": "a0cb9926f483fee070828548ea0e1ecb",
+      "returnCode": "IICIPUS20003",
+      "returnDesc": "登录成功！",
+      "returnStatus": "1",
+      "serviceCode": "USLogin",
+      "systemDate": "201509171509594"
+    }
+  }
+}

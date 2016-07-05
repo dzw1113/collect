@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="UTF-8">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+    <title></title>
+    <script>
+        $(document).ready(function(){
+            var SimpleListModel = function(items) {
+                this.items = ko.observableArray(items);
+                this.itemToAdd = ko.observable("");
+                this.addItem = function() {
+                    if (this.itemToAdd() != "") {
+                        this.items.push(this.itemToAdd()); // Adds the item. Writing to the "items" observableArray causes any associated UI to update.
+                        this.itemToAdd(""); // Clears the text box, because it's bound to the "itemToAdd" observable
+                    }
+                }.bind(this);  // Ensure that "this" is always this view model
+            };
+
+            ko.applyBindings(new SimpleListModel(["Alpha", "Beta", "Gamma"]));
+        })
+    </script>
+</head>
+<body>
+
+
+<form data-bind="submit: addItem">
+    New item:
+    <input data-bind='value: itemToAdd, valueUpdate: "afterkeydown"' />
+    <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+    <p>Your items:</p>
+    <select multiple="multiple" width="50" data-bind="options: items"> </select>
+</form>
+
+</body>
+</html>

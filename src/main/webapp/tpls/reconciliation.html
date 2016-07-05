@@ -1,0 +1,151 @@
+<div class="ks-switchable-content" ng-controller="reconcilitationCtrl">
+
+    <div style="display: none;"></div>
+    <div style="display: none;"></div>
+    <div style="display: none;"></div>
+    <div style="display: block;">
+
+        <div class="content-box-con">
+            <div class="box-con-bg">
+                <div class="content-box-con-bd">
+                    <div class="title search-box">
+                        <span><input type="text" class="some_class radius3" id="startDate" ng-model="startDate"/></span>
+                        <span>至：</span>
+                        <span><input type="text" class="some_class radius3" id="endDate" ng-model="endDate"/></span>
+
+                        <span><input type="button" class="radius3 JsW button" data-control-type="button" button
+                               ng-click="getRecordList()" value="查询"/></span>
+                    </div>
+                    <ul>
+                        <li class="img1">
+                            <div class="box">
+                                <div class="categoryname">转账</div>
+                                <div class="details">
+                                    <p><span>{{(!recMap.get('R001').items?0:!recMap.get('R001').items)|number}}笔</span></p>
+
+                                    <p><span>￥{{(!recMap.get('R001').amount?0:recMap.get('R001').amount)|number:2}}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="img2">
+                            <div class="box">
+                                <div class="categoryname">现金</div>
+                                <div class="details">
+                                    <p><span>{{(!recMap.get('R002').items?0:recMap.get('R002').items)|number}}笔</span></p>
+
+                                    <p><span>￥{{(!recMap.get('R002').amount?0:recMap.get('R002').amount)|number:2}}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="img3">
+                            <div class="box">
+                                <div class="categoryname">刷卡</div>
+                                <div class="details">
+                                    <p><span>{{(!recMap.get('R003').items?0:recMap.get('R003').items)|number}}笔</span></p>
+
+                                    <p><span>￥{{(!recMap.get('R003').amount?0:recMap.get('R003').amount)|number:2}}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="img4">
+                            <div class="box">
+                                <div class="categoryname">自助缴费</div>
+                                <div class="details">
+                                    <p><span>{{(!recMap.get('R004').items?0:recMap.get('R004').items)|number}}笔</span></p>
+
+                                    <p><span>￥{{(!recMap.get('R004').amount?0:recMap.get('R004').amount)|number:2}}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="img5">
+                            <div class="box">
+                                <div class="categoryname">物业费</div>
+                                <div class="details">
+                                    <p><span>{{(!recMap.get('R005').items?0:recMap.get('R005').items)|number}}笔</span></p>
+
+                                    <p><span>￥{{(!recMap.get('R005').amount?0:recMap.get('R005').amount)|number:2}}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="img6">
+                            <div class="box">
+                                <div class="categoryname">水费</div>
+                                <div class="details">
+                                    <p><span>{{(!recMap.get('R006').items?0:recMap.get('R006').items)|number}}笔</span></p>
+
+                                    <p><span>￥{{(!recMap.get('R006').amount?0:recMap.get('R006').amount)|number:2}}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="img7">
+                            <div class="box">
+                                <div class="categoryname">电费</div>
+                                <div class="details">
+                                    <p><span>{{(!recMap.get('R007').items?0:recMap.get('R007').items)|number}}笔</span></p>
+
+                                    <p><span>￥{{(!recMap.get('R007').amount?0:recMap.get('R007').amount)|number:2}}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="img8">
+                            <div class="box">
+                                <div class="categoryname">其它费用</div>
+                                <div class="details">
+                                    <p><span>{{(!recMap.get('R008').items?0:recMap.get('R008').items)|number}}笔</span></p>
+
+                                    <p><span>￥{{(!recMap.get('R008').amount?0:recMap.get('R008').amount)|number:2}}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-box-con-ft">
+                    <ul>
+                        <li class="money1">收入金额：<span>{{responseBody.incomeAmount|number:2}}</span></li>
+                        <li class="money2">支出金额：<span>￥{{responseBody.spend|number:2}}</span></li>
+                        <li class="money3">合计：<span>￥{{responseBody.totalAmount|number:2}}</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-box-ft JsW" data-widget-config="{'dropDown':200,'contentCls':'reason-box'}"
+             data-widget-type="popup">
+            <div class="option">对账结果：
+					        						<span>
+					        							<label class="ks-pop-close">
+                                                            <div class="JsW control-radio ks-radio"
+                                                                 radio>
+                                                                <input type="radio" class="radio" name="RadioGroup1"
+                                                                       value="同意" id="RadioGroup1_0" checked
+                                                                       ng-model="reconResult"
+                                                                       style="display: none;">
+                                                            </div>
+                                                            同意
+                                                        </label>
+														<label class="ks-pop-nav">
+                                                            <div class="JsW control-radio" radio>
+                                                                <input type="radio" class="radio" name="RadioGroup1"
+                                                                       value="不同意" id="RadioGroup1_1"
+                                                                       ng-model="reconResult"
+                                                                       style="display: none;">
+                                                            </div>
+                                                            不同意
+                                                        </label>
+					        						</span>
+            </div>
+            <div class="reason-box" ng-show="reconResult=='不同意'">
+                <div class="reason-hd">不同意的原因：</div>
+                <div class="reason-bd">
+                    <textarea class="textarea" ng-model="failureReason"></textarea>
+                </div>
+            </div>
+            <div class="confirm redbutton control-button">
+                <input value="提交" type="button" class="radius3 button JsW" data-control-type="button" button ng-click="getRecordSubmit()">
+            </div>
+        </div>
+
+    </div>
+</div>
+

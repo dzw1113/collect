@@ -1,0 +1,55 @@
+<div style="display: block;" class="tempcharge ng-scope" ng-controller="goldProPayListCtrl">
+
+    <div class="content-box-con">
+        <div class="content-box-label"><span>履约金查询</span></div>
+        <div class="list-table">
+            <div class="list-table-cont table4">
+                <div class="table-title">
+                    <div class="row">
+                        <table>
+                            <tbody>
+                            <tr class="th">
+                                <td class="col1">押金名称</td>
+                                <td class="col2">收费时间</td>
+                                <td class="col5">履约金金额</td>
+                                <td class="col6">状态</td>
+                                <td class="col7">操作</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="table-cont">
+                    <div class="row">
+                        <table>
+                            <tbody>
+                            <tr ng-repeat="formance in formanceList">
+                                <td class="col1" ng-bind="formance.chargeNo|filter_chargeNo"></td>
+                                <td class="col2" ng-bind="formance.chargeDate|filter_Date"></td>
+                                <td class="col5 red" ng-bind="'￥'+(formance.formanceAmount|number:2)"></td>
+                                <td class="col6" ng-bind="formance.returnStatus|filter_returnStatus"></td>
+                                <td class="col7" ng-show="formance.returnStatus=='02'"><a ng-click="toGoldReturn(formance)">退还</a>
+                                </td>
+                                <td class="col7" ng-show="formance.returnStatus=='01'">退还
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+
+			<div class="list-table-page">
+	            <div class="table-page-con">
+	                <pagination total-items="responseBody.total" ng-model="vm.page.pageNum" max-size="10"
+	                            items-per-page="vm.page.pageSize"
+	                            ng-change="vm.pageChanged()"
+	                            class="pagination-sm pull-right" boundary-links="true" first-Text="首页"
+	                            last-Text="最后一页" previous-text="上一页" next-text="下一页"></pagination>
+	            </div>
+	        </div>
+        </div>
+    </div>
+</div>

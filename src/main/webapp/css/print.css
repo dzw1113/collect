@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-08-17 16:06:28
+ * @version $Id$
+ */
+/*------------------18打印-账单详情打印样式开始----------------*/
+.printdetail{
+	width:17cm;
+	position:relative;
+	font-size:10px;
+	}
+
+.printdetail .table7 .tt .logo1{
+/*	background:none;*/
+    margin-top:0px;
+    font-size: 25px;
+    line-height: 35px;
+	width:120px;
+	left:5px;
+	display: none;
+	}
+.printdetail .table7 .tt .logo1 img{
+	width:120px;
+	}
+.printdetail .table7 .table-cont{
+	margin-left:5px;
+	}
+.printdetail .table7 .tt {
+	line-height:30px;
+	font-size:20px;
+	}
+.printdetail .table7 .tt .subtitle{
+	margin-top:0px;
+	}
+
+.printdetail .table7 .table-title .row .subdetails,.printdetail .table7 .table-cont .row .subdetails{
+	margin-left:5px;
+	}
+
+.printdetail .table7 .table-cont .th{
+	height:20px;
+	line-height:20px;
+	}
+.printdetail .table7 table td{
+	height:25px;
+	line-height:25px;
+	}
+.printdetail .table7 .table-cont .col1{
+	text-align: left;
+    text-indent: 1.5em;
+	}
+.printdetail .table7 .table-cont .th td{
+	height:20px;
+	line-height:20px;
+	background:#e7e7e7;
+	font-weight:bold;
+	}
+.printdetail .table7 .table-cont table .tablelayoutrow td {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    border: medium none;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.printdetail .table7 .row .subdetails ul li{
+	margin: 0;
+	}
+/*------------------18打印-账单详情打印样式结束----------------*/
+/*------------------19打印-收据打印样式开始----------------*/
+.printreceipt{
+	width:17cm;
+	position:relative;
+	font-size:10px;
+	}
+.printreceipt .tt .receipt-title{
+	height:70px;
+	line-height:70px;
+	font-size:20px;
+	}
+
+.printreceipt .tt .receipt-title .number {
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+.printreceipt .table6 .tt .logo1{
+	background:none;
+	width:120px;
+	left:5px;
+	display: none;
+	}
+.printreceipt .table6 .tt .logo1 img{
+	width:120px;
+	}
+.printreceipt .table6 .table-cont{
+	margin-left:5px;
+	}
+.printreceipt .table6 .table-title .row .margin{
+	margin:10px 0 20px 10px;
+	}
+.printreceipt .table6 .table-cont .th{
+	height:20px;
+	line-height:20px;
+	}
+.printreceipt .list-table-cont table td{
+	height:25px;
+	line-height:25px;
+	}
+.printreceipt .list-table-cont .table-cont .th td{
+	height:20px;
+	line-height:20px;
+	background:#e7e7e7;
+	font-weight:bold;
+	}
+.printreceipt .list-table-cont .table-cont table .tablelayoutrow td {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    border: medium none;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+.printreceipt  .table6 .table-cont .lable{
+	font-size:9px;
+	height:220px;
+	top:120px;
+	right:5px;
+	}
+.printreceipt  .table6 .table-cont .lable .lable-box{
+	margin-top:0px;
+	}
+.printreceipt  .table6 .table-cont .lable .lable-box .two{
+	margin-top:0;
+	}
+.printreceipt  .table6 .row .subdetails ul li{
+	margin: 10px 0;
+	}
+/*------------------19打印-收据打印样式结束----------------*/

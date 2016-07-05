@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://www.duiba.com.cn/AppHdTool/previewShakeLottery?dbnewopen -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <!--    <meta content="target-densitydpi=320,width=640,user-scalable=no" name="viewport">-->
+<!--    <meta name="apple-mobile-web-app-capable" content="yes">-->
+<!--    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">-->
+<!--    <meta content="telephone=no" name="format-detection">-->
+    <title>摇一摇</title>
+    <script src="js/viewport.js?v=69601e31"></script>
+    <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/shake-v5.27.css">
+    <script src="js/zfsc.js?v=32615b90"></script>
+    <script src="../js/jquery/jquery-1.11.3.min.js?v=84e532cc"></script>
+    <script src="../js/layer/layer.js?v=b17328cc"></script>
+    <script src="../js/datetimepicker/jquery.datetimepicker.full.min.js?v=6cbd6601"></script>
+
+    <script src="../js/jquery/jquery.json.min.js?v=33a79ae0"></script>
+    <script src="../js/comm/public-obj.js?v=a8d62b97"></script>
+    <script src="../js/comm/comm.js?v=c6f4381d"></script>
+    <script src="js/shake.js?v=a08bde17"></script>
+    <script src="js/shaketree.js?v=06ca1eaa"></script>
+
+    <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=a972ec196bcd"></script>
+    <script>
+       $(function(){
+        //var tt1=ree.CFG.promotionTitle||"摇一摇"
+          mobShare.config( {
+
+            debug: true, // 开启调试，将在浏览器的控制台输出调试信息
+
+            appkey: 'a972ec196bcd', // appkey
+
+            params: {
+                url: window.location.protocol+"//"+window.location.host+window.location.pathname+"?promotionId="+tree.CFG.promotionId, // 分享链接
+                title: tree.CFG.promotionTitle || "摇一摇", // 分享标题
+                description: tree.CFG.descriptionTitle+'正在业主贝贝APP上火热进行，这样的好事小编怎么能敢忘记您呢？前方已有一大波小伙伴正在哄抢好礼，您赶紧呐~', // 分享内容
+                //pic: 'http://www.mob.com/mob/images/sharesdk/tab-content3.jpg', // 分享图片，使用逗号,隔开
+            }
+
+            /**
+             * 分享时触发的回调函数
+             * 分享是否成功，目前第三方平台并没有相关接口，因此无法知道分享结果
+             * 所以此函数只会提供分享时的相关信息
+             * 
+             * @param {String} plat 平台名称
+             * @param {Object} params 实际分享的参数 { url: 链接, title: 标题, description: 内容, pic: 图片连接 }
+             */
+        //    callback: function( plat, params ) {
+        //    }
+
+        } );
+         });
+
+    </script>
+    
+    <link href="css/share.css" rel="stylesheet">
+</head>
+
+<body>
+<audio id="myaudio">
+    <source src="music/tree.mp3" type="audio/mpeg">
+    <source src="music/tree.wav" type="audio/wav">
+</audio>
+<!--   <div id="fff"><p>dsafsafsdafsdafdsafsadf</p><p>dsafsafsdafsdafdsafsadf</p></div>-->
+    <div id="db-content">
+        <div class="main">
+           <div class="main-bd">
+                <div class="info">
+                    <p class="credits"><strong>摇一摇活动预览</strong></p>
+                    <!-- <p class="tip"><i></i>摇一摇即可抽奖</p> -->
+                </div>
+                <div class="cloud-before"></div>
+                <div class="cloud-after"></div>
+                <img src="img/themeimg.png?v=1b5c1367" class="themeimg">
+                <img src="img/tree.png?v=3c2a58ee" class="tree">
+                <div class="windcar-left"></div>
+                <i class="popup-slidedn"></i>
+                <div class="slider" style="margin-left: 20px;display:none;">
+                    <!-- <i class="arrow-left" style="visibility: visible;"></i>
+                    <div id="swipe" style="visibility: visible;">
+                        <div class="swipe-wrap" style="width: 1000px;"><div data-index="0" style="width: 500px; left: 0px; transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);"><li data-type="4" data-id="1">
+                                <img src="./摇一摇活动预览_files/0d7flpb5nj.jpg">
+                                <p class="title">58陪练1小时体验券</p>
+                            </li><li data-type="4" data-id="2">
+                                <img src="./摇一摇活动预览_files/lb7qpgapip.jpg">
+                                <p class="title">桔色网安全套免费领</p>
+                            </li><li data-type="4" data-id="3">
+                                <img src="./摇一摇活动预览_files/jgp47xm5zc.jpg">
+                                <p class="title">安永美来1500元套餐券</p>
+                            </li></div><div data-index="1" style="width: 500px; left: -500px; transition-duration: 0ms; transform: translate(500px, 0px) translateZ(0px);"><li data-type="4" data-id="4">
+                                <img src="./摇一摇活动预览_files/h39cjczbwl.jpg">
+                                <p class="title">4个土鸡蛋请你试吃</p>
+                            </li></div></div>
+                    </div>
+                    <i class="arrow-right" style="visibility: visible;"></i> -->
+                </div>
+
+                <div id="plug-share">
+                    <!--MOB SHARE BEGIN-->
+                    <div id="ui-button" style="display:none;"></div>
+                    <div id="isinapp">
+                        <div class="-mob-share-ui-button -mob-share-open"></div>
+                        <div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
+                            <ul class="-mob-share-list">
+                                <li class="icon -mob-share-weibo"><p>新浪微博</p></li>
+                                <li class="icon -mob-share-qzone"><p>QQ空间</p></li>
+                                <li class="icon -mob-share-qq"><p>QQ好友</p></li>
+                                <li class="icon -mob-share-weixin"><p>微信</p></li>
+                            </ul>
+                            <div class="-mob-share-close">取消</div>
+                        </div>
+                        <div class="-mob-share-ui-bg"></div>
+                    </div>	
+                    <!--MOB SHARE END-->
+                </div>
+            </div>
+        </div>
+        <div class="main1" style="display:none;">
+            <div class="conten">
+                <i class="popup-slideup"></i>
+                <div class="main1-hd">
+                    <h1>
+                <!--            活动规则-->
+                </h1></div>
+                <div id="prizeList">
+                    <!-- <div class="description">
+                        <h4>奖品详情</h4>
+                        <div class="description-item">
+                            <div class="description-item-img"><img src="img/2015040916540574df6.jpg"/></div>
+                            <ul class="description-item-txt">
+                                <li>primo3智能音乐运动耳机</li>
+                                <li>共60份，音乐运动完美融合；</li>
+                                <li>运动监测，语音提醒，形状记忆；</li>
+                                <li>随风奔跑，速速变身乐活潮客。</li>
+                            </ul>
+                        </div>
+                        <div class="description-item">
+                            <div class="description-item-img"><img src="img/2015040916540574df6.jpg"/></div>
+                            <ul class="description-item-txt">
+                                <li>primo3智能音乐运动耳机</li>
+                                <li>共60份，音乐运动完美融合；</li>
+                                <li>运动监测，语音提醒，形状记忆；</li>
+                                <li>随风奔跑，速速变身乐活潮客。</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+                <div id="description">
+                    <!-- <div class="description description-foot">
+                        <h4>活动规则</h4>
+                        <ul>
+                            <li>当您参加积分抽奖时，兑换不同时间段内的一个或多个抽 奖编号，多个抽奖编号包括起号、止号以及中间连续编号为您所兑换的抽奖编号。当抽奖结束时，采用随机或人工抽取的形式抽取抽奖编号作为中奖标识。</li>
+                            <li>每期抽奖编号都从某个固定抽奖编号数开始，您兑换的抽奖编号可能会出现抽奖编号相同的情况，但是抽奖期日不同。您兑换到的抽奖编号仅代表您在本期对应奖品编号中的序列。</li>
+                            <li>每期抽奖活动只限于<a href="">该期该奖品</a>兑换到该抽奖编号的用户，不同期或不同奖品的相同编号的用户不在中奖范围内。期对应奖品编号中的序列.</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer-ui-ios">
+                <div id="ui-ios"><div class="iso-br">本活动和设备生产商Apple Inc.公司无关</div></div>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="result-modal">
+        <div class="first dialog">
+            <img src="img/first.png?v=db1992ea">
+            <div>
+                <h2>用力摇手机即可抽奖哦~</h2>
+                <p>您今天还有<span></span>免费抽奖机会。</p>
+            </div>
+            <i class="close"></i>
+        </div>
+        <div class="error dialog">
+            <img src="img/error.png?v=15eb8669">
+            <h2>出错了</h2>
+            <p></p>
+            <i class="close"></i>
+            <div class="btn-group">
+                <a href="javascript:void(0)" class="btn red cancel">确定</a>
+            </div>
+        </div>
+        <div class="noCredits dialog">
+            <img src="img/nocredits.png?v=d5b2de85">
+            <div>
+                <h2>积分不足</h2>
+                <p>您的积分不足，快去赚积分吧~</p>
+            </div>
+            <i class="close"></i>
+        </div>
+        <div class="gameover dialog">
+            <img src="img/disabled.png?v=567507e7">
+            <div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <i class="close"></i>
+        </div>
+        <div class="failed dialog">
+            <i class="face"></i>
+            <img src="img/rain.png?v=cd45c958">
+            <div class="title">
+                <h2>未中奖</h2>
+                <p></p>
+            </div>
+            <i class="close"></i>
+            <div class="btn-group">
+                <a href="javascript:void(0)" class="btn red cancel">再接再厉</a>
+            </div>
+        </div>
+        <div class="again dialog">
+            <img src="img/again.png?v=c5bf68ad">
+        </div>
+        <div class="win dialog">
+            <img src="img/winflag.png?v=bf785386">
+            <div class="winsome">
+                <img>
+                <p></p>
+            </div>
+            <i class="close"></i>
+            <!--            <p id="help" class="help"> 也可到首页“兑换记录”里领奖。<br>24小时内有效哦~< /p>-->
+            <div id="status">
+                <span>奖品领取成功！</span>
+            </div>
+            <div id="mobilecode">
+                <div class="mobile">
+                    <input placeholder="输入手机号领取奖品" class="inputTxt" id="mobileTxt" type="tel">
+                    <div class="getCode-btn"><span class="span getcodedir">获取验证码</span></div>
+                </div>
+                <div class="code">
+                    <input placeholder="输入短信验证码" class="inputTxt" id="codeTxt" type="text">
+                </div>
+                <div class="msgtext">请用该手机号登录业主贝贝使用</div>
+            </div>
+            <div class="btn-group">
+                <a href="javascript:void(0)" class="btn red cancel">继续摇奖</a> <a href="javascript:void(0)" class="btn orange">领取奖品</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" style="display:none;">
+        <div class="popup-dialog">
+            <div class="slide-box">
+                <div class="popup-content">
+                    <img id="item-img">
+                    <div class="item-info">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div class="popup-description"></div>
+                </div>
+            </div>
+            <i class="popup-slideup"></i>
+            <div class="loading-dialog"><img src="img/loading.gif?v=3b8f6781">
+                <p>正在获取奖品信息,请稍后...</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</body>
+
+</html>
